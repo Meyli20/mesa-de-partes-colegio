@@ -23,11 +23,11 @@ class MesaPartes
     }
 
     // REGISTRAR
-    public Tramite Registrar(string remitente, int tipo, string asunto, int folios)
+    public Tramite Registrar(string remitente, string dni, int tipo, string asunto, int folios)
     {
         string codigo = GenerarCodigo();
         string fecha = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
-        Tramite nuevo = new Tramite(codigo, remitente, Tipos[tipo - 1], asunto, folios, fecha);
+        Tramite nuevo = new Tramite(codigo, remitente, dni, Tipos[tipo - 1], asunto, folios, fecha);
         tramites.Add(codigo, nuevo);
         return nuevo;
     }

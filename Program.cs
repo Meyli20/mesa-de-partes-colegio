@@ -50,6 +50,14 @@ class Program
             remitente = Console.ReadLine() ?? "";
         }
 
+        Console.WriteLine("DNI (8 dígitos):");
+        string dni = Console.ReadLine() ?? "";
+        while (!Validador.ValidarDni(dni))
+        {
+            Console.WriteLine("DNI inválido. Intenta de nuevo:");
+            dni = Console.ReadLine() ?? "";
+        }
+
         Console.WriteLine("Tipos de trámite:");
         for (int i = 0; i < mesa.Tipos.Length; i++)
         {
@@ -82,7 +90,7 @@ class Program
         asunto = asunto.Trim();
         asunto = char.ToUpper(asunto[0]) + asunto.Substring(1);
 
-        Tramite nuevo = mesa.Registrar(remitente, tipo, asunto, folios);
+        Tramite nuevo = mesa.Registrar(remitente, dni, tipo, asunto, folios);
         Console.WriteLine("\n=== COMPROBANTE DE REGISTRO ===");
         Tramite.MostrarEncabezado();
         nuevo.Mostrar();
