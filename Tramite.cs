@@ -24,11 +24,11 @@ class Tramite
 
     public static void MostrarEncabezado()
     {
-        Console.WriteLine($"{"Código",-15} {"Remitente",-22} {"DNI",-10} {"Trámite",-24} {"Asunto",-28} {"Folios",6} {"Fecha",-17}");
+        Console.WriteLine($"{"Código",-14} {"Remitente",-20} {"DNI",-9} {"Trámite",-22} {"Folios",-7} {"Fecha",-17} {"Asunto"}");
     }
 
     public void Mostrar()
     {
-        Console.WriteLine($"{Codigo,-15} {Remitente,-22} {Dni,-10} {TipoTramite,-24} {Asunto,-28} {Folios,6} {FechaRegistro,-17}");
+        Console.WriteLine($"{Codigo,-14} {Remitente,-20} {Dni,-9} {TipoTramite,-22} {Folios,-7} {FechaRegistro,-17} {FechaRegistro,-17}");
     }
 }
