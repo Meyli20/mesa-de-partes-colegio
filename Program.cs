@@ -92,8 +92,7 @@ class Program
 
         Tramite nuevo = mesa.Registrar(remitente, dni, tipo, asunto, folios);
         Console.WriteLine("\n=== COMPROBANTE DE REGISTRO ===");
-        Tramite.MostrarEncabezado();
-        nuevo.Mostrar();
+        nuevo.MostrarComprobante();
         Console.WriteLine("Guarda tu código: " + nuevo.Codigo);
     }
 
@@ -108,8 +107,7 @@ class Program
         }
         else
         {
-            Tramite.MostrarEncabezado();
-            hallado.Mostrar();
+            hallado.MostrarComprobante();
         }
     }
 

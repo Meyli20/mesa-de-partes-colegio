@@ -31,4 +31,18 @@ class Tramite
     {
         Console.WriteLine($"{Codigo,-14} {Remitente,-20} {Dni,-9} {TipoTramite,-22} {Folios,-7} {FechaRegistro,-17} {Asunto}");
     }
+
+    public void MostrarComprobante()
+    {
+        Console.WriteLine("=================================");
+        Console.WriteLine($"{"Código:",-12} {Codigo}");
+        Console.WriteLine($"{"Remitente:",-12} {Remitente}");
+        Console.WriteLine($"{"DNI:",-12} {Dni}");
+        Console.WriteLine($"{"Trámite:",-12} {TipoTramite}");
+        Console.WriteLine($"{"Folios:",-12} {Folios}");
+        Console.WriteLine($"{"Fecha:",-12} {FechaRegistro}");
+        Console.WriteLine($"{"Asunto:",-12} {Asunto}");
+        Console.WriteLine("=================================");
+    }
+       
 }
