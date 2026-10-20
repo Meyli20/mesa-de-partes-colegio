@@ -29,6 +29,6 @@ class Tramite
 
     public void Mostrar()
     {
-        Console.WriteLine($"{"Codigo",-14} {"Remitente",-20} {"Dni",-9} {"TipoTramite",-22} {"Folios",-7} {"FechaRegistro",-17} {"Asunto"}");
+        Console.WriteLine($"{Codigo,-14} {Remitente,-20} {Dni,-9} {TipoTramite,-22} {Folios,-7} {FechaRegistro,-17} {Asunto}");
     }
 }
