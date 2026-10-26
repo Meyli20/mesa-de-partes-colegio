@@ -9,6 +9,7 @@ class Tramite
     public string Asunto { get; set; }
     public int Folios { get; set; }
     public string FechaRegistro { get; set; }
+    public string Estado { get; set; } = "Tramitándose";
 
     public Tramite(string codigo, string remitente, string dni, string tipoTramite,
                    string asunto, int folios, string fechaRegistro)
@@ -24,12 +25,12 @@ class Tramite
 
     public static void MostrarEncabezado()
     {
-        Console.WriteLine($"{"Código",-14} {"Remitente",-20} {"DNI",-9} {"Trámite",-22} {"Folios",-7} {"Fecha",-17} {"Asunto"}");
+        Console.WriteLine($"{"Código",-14} {"Remitente",-20} {"DNI",-9} {"Trámite",-22} {"Folios",-7} {"Fecha",-17} {"Estado",-14} {"Asunto"}");
     }
 
     public void Mostrar()
     {
-        Console.WriteLine($"{Codigo,-14} {Remitente,-20} {Dni,-9} {TipoTramite,-22} {Folios,-7} {FechaRegistro,-17} {Asunto}");
+        Console.WriteLine($"{Codigo,-14} {Remitente,-20} {Dni,-9} {TipoTramite,-22} {Folios,-7} {FechaRegistro,-17} {Estado,-14} {Asunto}");
     }
 
     public void MostrarComprobante()
@@ -41,8 +42,8 @@ class Tramite
         Console.WriteLine($"{"Trámite:",-12} {TipoTramite}");
         Console.WriteLine($"{"Folios:",-12} {Folios}");
         Console.WriteLine($"{"Fecha:",-12} {FechaRegistro}");
+        Console.WriteLine($"{"Estado:",-12} {Estado}");
         Console.WriteLine($"{"Asunto:",-12} {Asunto}");
         Console.WriteLine("=================================");
     }
-       
 }
